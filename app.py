@@ -4,15 +4,7 @@ import yfinance as yf
 from keras.models import load_model
 import streamlit as st
 import matplotlib.pyplot as plt
-import pickle
-from keras.models import save_model
-
-# Load old pickle model (if it works locally)
-with open('StockModel.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-# Save as HDF5
-model.save('StockModel.h5')
+model = load_model('StockModel.h5')
 
 
 
