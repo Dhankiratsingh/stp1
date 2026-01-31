@@ -52,7 +52,8 @@ y=[]
 for i in range(100,data_test_scale.shape[0]):
     x.append(data_test_scale[i-100:i])
     y.append(data_test_scale[i,0])
-x,y=np.array(x).np.array(y)
+x, y = np.array(x), np.array(y)
+
 predict=model.predict(x)
 scale=1/scaler.scale_
 predict=predict*scale
