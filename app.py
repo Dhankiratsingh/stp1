@@ -30,23 +30,23 @@ fig1=plt.figure(figsize=(8,6))
 plt.plot(ma_50_days,'r')
 plt.plot(data.Close,'g')    
 plt.show()
-st.ptyplot(fig1)
+st.pyplot(fig1)
 
 st.subheader('Price vs MA50 vs MA100')
-ma_100_days=Data.Close.rolling(100).mean()
+ma_100_days=data.Close.rolling(100).mean()
 fig1=plt.figure(figsize=(8,6))
 plt.plot(ma_100_days,'r')
 plt.plot(data.Close,'g')    
 plt.show()
-st.ptyplot(fig2)
+st.pyplot(fig2)
 
 st.subheader('Price vs MA50 vs MA100')
-ma_200_days=Data.Close.rolling(200).mean()
+ma_200_days=data.Close.rolling(200).mean()
 fig1=plt.figure(figsize=(8,6))
 plt.plot(ma_200_days,'r')
 plt.plot(data.Close,'g')    
 plt.show()
-st.ptyplot(fig3)
+st.pyplot(fig3)
 x=[]
 y=[]
 for i in range(100,data_test_scale.shape[0]):
