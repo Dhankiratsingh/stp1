@@ -4,9 +4,11 @@ import yfinance as yf
 from keras.models import load_model
 import streamlit as st
 import matplotlib.pyplot as plt
-import keras
-# Replace 'StockModel.pkl' with the folder path if it's a SavedModel directory
-model = keras.layers.TFSMLayer('StockModel.pkl', call_endpoint='serving_default')
+import pickle
+
+with open('StockModel.pkl', 'rb') as f:
+    model = pickle.load(f)
+
 
 
 
