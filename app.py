@@ -14,7 +14,7 @@ data=yf.download(stock,start,end)
 st.subheader('Stock Data')
 st.write(data)
 data_train=pd.DataFrame(data.Close[0: int(len(data)*0.80)])
-data_test=pd.DataFrame(data.Close(int(len(data)*0.80):len(data)))
+data_test=pd.DataFrame(data.Close[int(len(data)*0.80): len(data)])
 from sklearn.preprocessing import MinMaxScaler
 scaler=MinMaxScaler(feature_range=(0.1))
 pas_100_days=data_train.tail(100)
